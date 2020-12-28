@@ -1,30 +1,20 @@
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>All Memories</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content><h2>these are my memories - list to be added</h2></ion-content>
-  </ion-page>
+  <base-layout page-title="All Memories">
+    <memories-list :memories="memories"></memories-list>
+  </base-layout>
 </template>
 
 <script>
-import {
-  IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-} from "@ionic/vue";
+import MemoriesList from "../components/memories/MemoriesList.vue";
 
 export default {
   components: {
-    IonPage,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
+    MemoriesList,
+  },
+  computed: {
+    memories() {
+      return this.$store.getters.memories;
+    },
   },
 };
 </script>
