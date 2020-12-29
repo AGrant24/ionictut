@@ -2,3 +2,19 @@ ion-toolbar {
   --background: var(--ion-color-primary);
   --color: var(--ion-color-primary-contrast);
 }
+ion-thumbnail {
+  --border-radius: 15%;
+}
+ion-list {
+  /* --margin-top: 15px; */
+  padding: 8px 0px;
+  /* seems to have fixed issue with IOS not padding from the header */
+}
+.item .item-content {
+  padding: 0 !important;
+}
+/*ion-content {
+  /*--padding-top: 15px;*/
+/*--padding-start: -10px;
+}
+*/
